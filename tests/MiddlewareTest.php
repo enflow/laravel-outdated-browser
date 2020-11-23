@@ -17,7 +17,7 @@ class MiddlewareTest extends TestCase
                 ->assertSuccessful()
                 ->baseResponse->content();
 
-            TestCase::assertStringContainsString('Outdated Browser', $content);
+            TestCase::assertStringContainsString('v', $content);
         });
 
         TestResponse::macro('assertDontSeeGate', function () {
