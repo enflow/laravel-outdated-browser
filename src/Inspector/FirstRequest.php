@@ -9,6 +9,6 @@ class FirstRequest implements Inspector
     public function shouldPresentGate(Request $request): bool
     {
         // AJAX requests shouldn't have this gate added.
-        return !$request->ajax() && $request->method() === 'GET';
+        return ! $request->ajax() && $request->method() === 'GET';
     }
 }
