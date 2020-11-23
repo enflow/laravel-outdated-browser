@@ -11,6 +11,7 @@ class CookieMemory implements Memory
     public function hasContinued(): bool
     {
         return false;
+
         return ! ! Cookie::get(static::KEY);
     }
 
