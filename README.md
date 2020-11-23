@@ -4,9 +4,9 @@
 ![GitHub Workflow Status](https://github.com/enflow/laravel-outdated-browser/workflows/run-tests/badge.svg)  
 [![Total Downloads](https://img.shields.io/packagist/dt/enflow/laravel-outdated-browser.svg?style=flat-square)](https://packagist.org/packages/enflow/laravel-outdated-browser)  
   
-The `enflow/laravel-outdated-browser` package provides a easy way to warn your users about an outdated browser.
+The `enflow/laravel-outdated-browser` package provides an easy way to warn your users about an outdated browser.
 
-The user is presented with a full-screen page to encourage them to upgrade to the latest's browser. They may skip this message, after which they can continue in their (crappy) browser.
+The user is presented with a full-screen page to encourage them to upgrade to a modern browser. They may skip this message and continue to view the website in their (crappy) browser.
 
 ![Gate Example](./docs/gate.png)
 
@@ -47,7 +47,7 @@ For the `UserAgentDetector`, all users with Internet Explorer are presented with
 ## Memory classes
 A memory class can be specified via the config file, which should implement the `Enflow\OutdatedBrowser\Memory\Memory` interface.   
 
-This class is responsible for checking if the user continued through the gate, and responsible for saving when the user pressed 'continue'.  
+This class is responsible for checking if the user continued through the gate, and responsible for saving when the user pressed 'Proceed'.  
   
 ## Inspector classes
 A inspector class can be specified via the config file, which should implement the `Enflow\OutdatedBrowser\Inspector\Inspector` interface.   
