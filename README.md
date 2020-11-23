@@ -8,7 +8,7 @@ The `enflow/laravel-outdated-browser` package provides a easy way to warn your u
 
 The user is presented with a full-screen page to encourage them to upgrade to the latest's browser. They may skip this message, after which they can continue in their (crappy) browser.
 
-![Gate Example](./readme/gate.png)
+![Gate Example](./docs/gate.png)
 
 ## Installation  
 You can install the package via composer:  
