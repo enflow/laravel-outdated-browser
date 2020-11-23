@@ -52,7 +52,7 @@ This class is responsible for checking if the user continued through the gate, a
 ## Inspector classes
 A inspector class can be specified via the config file, which should implement the `Enflow\OutdatedBrowser\Inspector\Inspector` interface.   
 
-This class is responsible for checking the request and determining if now is the right time to show the 'outdated browser' gate. By default, the `FirstRequest` inspector is used, which will show the gate on the first request, excluding ajax requests.
+This class is responsible for checking the request and determining if now is the right time to show the 'outdated browser' gate. By default, the `FirstUserRequest` inspector is used, which will show the gate on the first GET request, excluding AJAX requests.
   
 ## View  
 You may publish the `gate` view to overrule it's styling and make it your own:  
