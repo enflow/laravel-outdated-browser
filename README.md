@@ -4,10 +4,12 @@
 ![GitHub Workflow Status](https://github.com/enflow/laravel-outdated-browser/workflows/run-tests/badge.svg)  
 [![Total Downloads](https://img.shields.io/packagist/dt/enflow/laravel-outdated-browser.svg?style=flat-square)](https://packagist.org/packages/enflow/laravel-outdated-browser)  
   
-The `enflow/laravel-outdated-browser` package provides a easy way to warn your users about an outdated browser.  
-  
-The user is presented with a full-screen page to encourage them to upgrade to the latest's browser. They may skip this message, after which they can continue in their (crappy) browser.  
-  
+The `enflow/laravel-outdated-browser` package provides a easy way to warn your users about an outdated browser.
+
+The user is presented with a full-screen page to encourage them to upgrade to the latest's browser. They may skip this message, after which they can continue in their (crappy) browser.
+
+![Gate Example](./readme/gate.png)
+
 ## Installation  
 You can install the package via composer:  
   
