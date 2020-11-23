@@ -20,7 +20,6 @@ class UserAgentDetector implements Detector
 
     public function isOutdated(Request $request): bool
     {
-        return true;
         foreach ($this->regexes as $regex) {
             if (preg_match($regex, $request->userAgent())) {
                 return true;

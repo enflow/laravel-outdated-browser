@@ -12,22 +12,6 @@ class MiddlewareTest extends TestCase
     {
         parent::setUp();
 
-        TestResponse::macro('assertSeeGate', function () {
-            $content = $this
-                ->assertSuccessful()
-                ->baseResponse->content();
-
-            TestCase::assertStringContainsString('v', $content);
-        });
-
-        TestResponse::macro('assertDontSeeGate', function () {
-            $this
-                ->assertSuccessful()
-                ->assertSee('ok');
-
-            return $this;
-        });
-
         Route::any('/', function () {
             return 'ok';
         })->middleware(OutdatedBrowserMiddleware::class);
@@ -37,21 +21,27 @@ class MiddlewareTest extends TestCase
     {
         config()->set('outdated-browser.blocked_user_agent_regexes', ['/test/i']);
 
-        $this
+        $content = $this
             ->withHeaders([
                 'User-Agent' => 'Test',
             ])
             ->get('/')
-            ->assertSeeGate();
+            ->assertSuccessful()
+            ->baseResponse->content();
+
+        $this->assertStringContainsString('Browser is outdated', $content);
     }
 
     public function test_that_gate_doesnt_activate_if_regex_doesnt_match()
     {
-        $this
+        $content = $this
             ->withHeaders([
                 'User-Agent' => 'Brand New Browser ✨',
             ])
             ->get('/')
-            ->assertDontSeeGate();
+            ->assertSuccessful()
+            ->baseResponse->content();
+
+        $this->assertEquals('ok', $content);
     }
 }
