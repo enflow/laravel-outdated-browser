@@ -74,6 +74,7 @@ If you discover any security related issues, please email michel@enflow.nl inste
   
 ## Credits  
 - [Michel Bardelmeijer](https://github.com/mbardelmeijer)  
+- [Ron Kesting](https://github.com/ronkesting)  
 - [All Contributors](../../contributors)  
   
 ## About Enflow  
