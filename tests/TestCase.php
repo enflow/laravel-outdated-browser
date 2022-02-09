@@ -2,8 +2,8 @@
 
 namespace Enflow\OutdatedBrowser\Test;
 
-use Orchestra\Testbench\TestCase as TestbenchTestCase;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
+use Orchestra\Testbench\TestCase as TestbenchTestCase;
 
 abstract class TestCase extends TestbenchTestCase
 {
