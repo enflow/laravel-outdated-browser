@@ -3,7 +3,6 @@
 namespace Enflow\OutdatedBrowser\Test;
 
 use Enflow\OutdatedBrowser\OutdatedBrowserMiddleware;
-use Illuminate\Testing\TestResponse;
 use Illuminate\Support\Facades\Route;
 
 class MiddlewareTest extends TestCase
