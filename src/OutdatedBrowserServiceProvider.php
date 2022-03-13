@@ -32,7 +32,7 @@ class OutdatedBrowserServiceProvider extends ServiceProvider
 
     private function registerTranslations(): void
     {
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'outdated-browser');
+        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'outdated-browser');
     }
 
     private function registerPublishables(): self
@@ -47,7 +47,7 @@ class OutdatedBrowserServiceProvider extends ServiceProvider
             ], 'views');
 
             $this->publishes([
-                __DIR__ . '/../../resources/lang' => resource_path('lang/vendor/outdated-browser'),
+                __DIR__ . '/../../lang' => lang_path('vendor/outdated-browser'),
             ], 'translations');
         }
 
