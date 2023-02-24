@@ -8,7 +8,7 @@ class SessionMemory implements Memory
 
     public function hasContinued(): bool
     {
-        return ! ! session()->get(static::KEY);
+        return (bool) session()->get(static::KEY);
     }
 
     public function remember(): void

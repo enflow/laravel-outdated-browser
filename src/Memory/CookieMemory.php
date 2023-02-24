@@ -10,7 +10,7 @@ class CookieMemory implements Memory
 
     public function hasContinued(): bool
     {
-        return ! ! Cookie::get(static::KEY);
+        return (bool) Cookie::get(static::KEY);
     }
 
     public function remember(): void

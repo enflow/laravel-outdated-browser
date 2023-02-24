@@ -13,9 +13,11 @@ class UserAgentDetector implements Detector
         $this->regexes = config('outdated-browser.blocked_user_agent_regexes', []);
     }
 
-    public function setRegexes(array $regexes)
+    public function setRegexes(array $regexes): self
     {
         $this->regexes = $regexes;
+
+        return $this;
     }
 
     public function isOutdated(Request $request): bool

@@ -10,15 +10,11 @@ use Illuminate\Http\Request;
 
 class OutdatedBrowserMiddleware
 {
-    public Detector $detector;
-    public Memory $memory;
-    public Inspector $inspector;
-
-    public function __construct(Detector $detector, Memory $memory, Inspector $inspector)
-    {
-        $this->detector = $detector;
-        $this->memory = $memory;
-        $this->inspecter = $inspector;
+    public function __construct(
+        public readonly Detector $detector,
+        public readonly Memory $memory,
+        public readonly Inspector $inspector,
+    ) {
     }
 
     public function handle(Request $request, Closure $next)
@@ -34,7 +30,7 @@ class OutdatedBrowserMiddleware
         }
 
         // We cannot ask here.
-        if ($this->inspecter->shouldPresentGate($request) !== true) {
+        if ($this->inspector->shouldPresentGate($request) !== true) {
             return $next($request);
         }
 
