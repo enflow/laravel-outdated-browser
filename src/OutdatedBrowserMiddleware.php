@@ -14,8 +14,7 @@ class OutdatedBrowserMiddleware
         public readonly Detector $detector,
         public readonly Memory $memory,
         public readonly Inspector $inspector,
-    ) {
-    }
+    ) {}
 
     public function handle(Request $request, Closure $next)
     {

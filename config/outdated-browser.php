@@ -1,9 +1,13 @@
 <?php
 
+use Enflow\OutdatedBrowser\Detector\UserAgentDetector;
+use Enflow\OutdatedBrowser\Inspector\FirstUserRequest;
+use Enflow\OutdatedBrowser\Memory\CookieMemory;
+
 return [
-    'detector_class' => \Enflow\OutdatedBrowser\Detector\UserAgentDetector::class,
-    'memory_class' => \Enflow\OutdatedBrowser\Memory\CookieMemory::class,
-    'inspector_class' => \Enflow\OutdatedBrowser\Inspector\FirstUserRequest::class,
+    'detector_class' => UserAgentDetector::class,
+    'memory_class' => CookieMemory::class,
+    'inspector_class' => FirstUserRequest::class,
 
     'blocked_user_agent_regexes' => [
         '~MSIE|Internet Explorer~i',
